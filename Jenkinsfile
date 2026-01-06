@@ -5,7 +5,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t apps:v1 .'
+                sh 'docker build -t apps:v2 .'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d --name html-app -p 5000:80 apps:v1'
+                sh 'docker run -d --name html-app -p 5001:80 apps:v2'
             }
         }
     }
