@@ -1,11 +1,9 @@
-# Use nginx web server
 FROM nginx:alpine
 
-# Remove default nginx html files
+LABEL maintainer="Abi"
+LABEL app="html-nginx"
+
 RUN rm -rf /usr/share/nginx/html/*
+COPY . /usr/share/nginx/html/
 
-# Copy our html file
-COPY index.html /usr/share/nginx/html/
-
-# Expose port 80
 EXPOSE 80
