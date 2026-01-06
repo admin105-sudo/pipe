@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/admin105-sudo/pipe.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t apps:v1 .'
