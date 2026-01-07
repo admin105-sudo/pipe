@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "admin105sudo/pipe-html"
+        IMAGE_NAME = "ahgbkjjgsfuyhjgnb/pipe-html"
     }
 
     stages {
